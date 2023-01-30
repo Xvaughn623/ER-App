@@ -7,10 +7,9 @@ import HomePage from './Pages/HomePage';
 function App() {
   return (
     <div className="App">{
-    //  <Routes>
-    //     <Route path="/Home" element={<HomePage />} />
-    //   </Routes>
-      <div>Elloo</div>
+      <Routes>
+         <Route path="/Home" element={<HomePage />} />
+       </Routes>
     }
     </div>
   );
