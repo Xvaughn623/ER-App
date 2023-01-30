@@ -12,8 +12,8 @@
     "@types/react-dom": "^18.0.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.0",
     "react-scripts": "5.0.1",
-    "typescript": "^4.8.4",
     "web-vitals": "^2.1.4",
     "workbox-background-sync": "^6.5.4",
     "workbox-broadcast-update": "^6.5.4",
@@ -28,6 +28,7 @@
     "workbox-strategies": "^6.5.4",
     "workbox-streams": "^6.5.4"
   },
+  "proxy": "http://localhost:3000",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -35,9 +36,18 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint",
+      "prettier"
+    ],
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "eslint:recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended",
+      "prettier"
     ]
   },
   "browserslist": {
@@ -51,5 +61,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.49.0",
+    "@typescript-eslint/parser": "^5.49.0",
+    "eslint": "^8.32.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.3",
+    "typescript": "^4.9.4"
   }
 }
