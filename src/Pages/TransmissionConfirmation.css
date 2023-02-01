@@ -1,32 +1,54 @@
-.TransmissionConfirmation {
-    text-align: center;
-    margin: 20px;
-  }
-  
-  img {
-    width: 100px;
-    height: auto;a
-    margin-bottom: 20px;
-  }
-  
-  h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-  }
-  
-  p {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-  
-  li {
-    margin-top: 10px;
-  }
-  
+.transmission-confirmation {
+  width: 60%;
+  margin: 50px auto;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 2px 3px #ccc;
+}
+
+.transmission-confirmation h2 {
+  margin-bottom: 30px;
+}
+
+.transmission-confirmation .file-info {
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.transmission-confirmation .file-info span {
+  font-weight: bold;
+  display: inline-block;
+  width: 120px;
+}
+
+.transmission-confirmation .file-list {
+  list-style: decimal inside;
+  padding-left: 20px;
+}
+
+.transmission-confirmation .transaction-info {
+  margin-bottom: 20px;
+}
+
+.transmission-confirmation .status {
+  margin-top: 30px;
+  font-weight: bold;
+  color: green;
+}
+
+.transmission-confirmation img {
+  width: 100px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.file-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 500px;
+  height: 85px;
+}

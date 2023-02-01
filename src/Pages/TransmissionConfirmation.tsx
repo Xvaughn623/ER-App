@@ -11,11 +11,15 @@ interface Props {
 const TransmissionConfirmation: React.FC<Props> = ({ fileName, transactionId, timeUploaded, timeReceived }) => {
   return (
     <div className="transmission-confirmation">
-      <img src="https://via.placeholder.com/100x100" alt="Logo" />
+      <img src="https://flic.kr/p/2oeDR9A" alt="Logo" />
       <h2>File Upload Confirmation</h2>
       <div className="file-info">
-        <span>File Name:</span>
-        {fileName}
+          <span>Forms Uploaded:</span>
+        <ul>
+          <li>Personal Information Form</li>
+          <li>Latest Intake Form</li>
+          <li>Medical History Form</li>
+        </ul>
       </div>
       <div className="transaction-info">
         <span>Transaction ID:</span>
@@ -29,7 +33,7 @@ const TransmissionConfirmation: React.FC<Props> = ({ fileName, transactionId, ti
         <span>Time Received:</span>
         {timeReceived}
       </div>
-      <div className="status">Successfully received</div>
+      <div className="status">Status: Successfully Received!</div>
     </div>
   );
 };
