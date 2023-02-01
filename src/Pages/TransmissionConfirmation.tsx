@@ -1,5 +1,5 @@
-import './TransmissionConfirmation.css';
 import React from 'react';
+import './TransmissionConfirmation.css';
 
 interface Props {
   fileName: string;
@@ -11,18 +11,25 @@ interface Props {
 const TransmissionConfirmation: React.FC<Props> = ({ fileName, transactionId, timeUploaded, timeReceived }) => {
   return (
     <div className="transmission-confirmation">
-      <img src="logo.png" alt="logo" />
-      <h1>File Uploaded Successfully!</h1>
-      <p>Transaction ID: {transactionId}</p>
-      <p>The following files have been uploaded:</p>
-      <ul>
-        <li>Personal Information</li>
-        <li>Latest Intake Form</li>
-        <li>Medical History</li>
-      </ul>
-      <p>Time uploaded: {timeUploaded}</p>
-      <p>Time received: {timeReceived}</p>
-      <p>Status: Successfully received</p>
+      <img src="https://via.placeholder.com/100x100" alt="Logo" />
+      <h2>File Upload Confirmation</h2>
+      <div className="file-info">
+        <span>File Name:</span>
+        {fileName}
+      </div>
+      <div className="transaction-info">
+        <span>Transaction ID:</span>
+        {transactionId}
+      </div>
+      <div className="transaction-info">
+        <span>Time Uploaded:</span>
+        {timeUploaded}
+      </div>
+      <div className="transaction-info">
+        <span>Time Received:</span>
+        {timeReceived}
+      </div>
+      <div className="status">Successfully received</div>
     </div>
   );
 };
