@@ -9,6 +9,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/Home" element={<HomePage />} />
+        <Route path="/Intake" element={<Intake />} />
         <Route path="/transmission-confirmation" element={
           <TransmissionConfirmation
             fileName="Forms Uploaded.pdf"
