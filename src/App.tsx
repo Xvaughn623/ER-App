@@ -3,13 +3,14 @@ import './App.css';
 import { Route, Routes } from 'react-router-dom'
 import HomePage from './Pages/HomePage';
 import TransmissionConfirmation from './Pages/TransmissionConfirmation';
+import Intake from './Pages/TransmissionConfirmation';
 
 function App() {
   return (
     <div className="App">
       <Routes>
         <Route path="/Home" element={<HomePage />} />
-        <Route path="/Intake" element={<Intake />} />
+        <Route path="/Intake" element={<Intake fileName={''} transactionId={''} timeUploaded={''} timeReceived={''} />} />
         <Route path="/transmission-confirmation" element={
           <TransmissionConfirmation
             fileName="Forms Uploaded.pdf"
