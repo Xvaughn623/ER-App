@@ -3,14 +3,13 @@ import './App.css';
 import { Route, Routes } from 'react-router-dom'
 import HomePage from './Pages/HomePage';
 import TransmissionConfirmation from './Pages/TransmissionConfirmation';
-import Intake from './Pages/TransmissionConfirmation';
+import NearbyHospitals from './Pages/NearbyHospitals';
 
 function App() {
   return (
     <div className="App">
       <Routes>
         <Route path="/Home" element={<HomePage />} />
-        <Route path="/Intake" element={<Intake fileName={''} transactionId={''} timeUploaded={''} timeReceived={''} />} />
         <Route path="/transmission-confirmation" element={
           <TransmissionConfirmation
             fileName="Forms Uploaded.pdf"
@@ -19,9 +18,11 @@ function App() {
             timeReceived=" 01/24/2023, 18:04:03 EST"
           />
         } />
+        <Route path="/nearby-hospitals" element={<NearbyHospitals />} />
       </Routes>
     </div>
   );
 }
 
 export default App;
+
