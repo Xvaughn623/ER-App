@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, Navigate} from 'react-router-dom'
 import HomePage from './Pages/HomePage';
 import TransmissionConfirmation from './Pages/TransmissionConfirmation';
 import Intake from './Pages/TransmissionConfirmation';
@@ -19,6 +19,7 @@ function App() {
             timeReceived=" 01/24/2023, 18:04:03 EST"
           />
         } />
+        <Route path="*" element={<Navigate to="/Home" />}/>
       </Routes>
     </div>
   );
