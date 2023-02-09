@@ -6,49 +6,47 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0px 2px 3px #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.transmission-confirmation h2 {
+h2 {
   margin-bottom: 30px;
 }
 
-.transmission-confirmation .file-info {
-  margin-bottom: 30px;
+.file-info {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: left;
 }
-
-.transmission-confirmation .file-info span {
+.file-info span {
   font-weight: bold;
   display: inline-block;
   width: 120px;
+  text-align: center;
 }
 
-.transmission-confirmation .file-list {
+.file-list {
   list-style: decimal inside;
+  text-align: center;
   padding-left: 20px;
 }
 
-.transmission-confirmation .transaction-info {
-  margin-bottom: 20px;
+.transaction-info {
+  margin-bottom: 30px;
 }
 
-.transmission-confirmation .status {
-  margin-top: 30px;
+.status {
+  margin-top: 10px;
   font-weight: bold;
   color: green;
 }
 
-.transmission-confirmation img {
+img {
   width: 100px;
   margin-bottom: 30px;
   align-items: center;
-}
-
-.file-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: 500px;
-  height: 85px;
 }
