@@ -11,7 +11,6 @@ const HomePage = () => {
                         <button className='BlackButton'>Personal Information</button>
                         <button className='BlackButton'>Nearby Hospitals</button>
                     </div>
-                    
                     <div>Forms</div>
                     <div>
                         <button className='GreyButton'>NEW INTAKE FORM</button>
@@ -20,7 +19,6 @@ const HomePage = () => {
                         <button className='GreyButton'>VIEW MEDICAL HISTORY</button>
                         <button className='GreyButton'>CLICK HERE TO UPLOAD FORMS</button>
                     </div>
-                    
                 </div>
             </div>
         )

@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, Navigate} from 'react-router-dom'
 import HomePage from './Pages/HomePage';
 import TransmissionConfirmation from './Pages/TransmissionConfirmation';
 import NearbyHospitals from './Pages/NearbyHospitals';
@@ -19,6 +19,7 @@ function App() {
           />
         } />
         <Route path="/nearby-hospitals" element={<NearbyHospitals />} />
+        <Route path="*" element={<Navigate to="/Home" />}/>
       </Routes>
     </div>
   );
