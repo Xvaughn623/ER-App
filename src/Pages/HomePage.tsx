@@ -1,6 +1,9 @@
 import './HomePage.css';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
 const HomePage = () => {
+    const navigate = useNavigate();
         return (
             <div>
                 <div className="MainPage">
@@ -9,11 +12,11 @@ const HomePage = () => {
                     </div>
                     <div className='blackButtonContainer'>
                         <button className='BlackButton'>Personal Information</button>
-                        <button className='BlackButton'>Nearby Hospitals</button>
+                        <button onClick={() => navigate("/nearby-hospitals")} className='BlackButton'>Nearby Hospitals</button>
                     </div>
                     <div>Forms</div>
                     <div>
-                        <button className='GreyButton'>NEW INTAKE FORM</button>
+                        <button onClick={() => navigate("/Intake")} className='GreyButton'>NEW INTAKE FORM</button>
                         <button className='GreyButton'>UPDATE MEDICAL HISTORY</button>
                         <button className='GreyButton'>VIEW PREVIOUS INTAKE FORMS</button>
                         <button className='GreyButton'>VIEW MEDICAL HISTORY</button>

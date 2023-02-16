@@ -4,12 +4,14 @@ import { Route, Routes, Navigate} from 'react-router-dom'
 import HomePage from './Pages/HomePage';
 import TransmissionConfirmation from './Pages/TransmissionConfirmation';
 import NearbyHospitals from './Pages/NearbyHospitals';
+import Intake from './Pages/Intake';
 
 function App() {
   return (
     <div className="App">
       <Routes>
         <Route path="/Home" element={<HomePage />} />
+        <Route path="/Intake" element={<Intake />} />
         <Route path="/transmission-confirmation" element={
           <TransmissionConfirmation
             fileName="Forms Uploaded.pdf"
