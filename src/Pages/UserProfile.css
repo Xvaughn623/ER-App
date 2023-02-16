@@ -1,0 +1,50 @@
+
+.UserProfile-item {
+    border: 1px solid black;
+    padding: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .UserProfile-item label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .UserProfile-item p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .userprofile-data-container {
+    border: 2px solid black;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .emergency-contact-box {
+    margin-top: 20px;
+  }
+  
+  .emergency-contact-container  {
+    border: 2px solid black;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .insurance-container{
+    border: 2px solid black;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .insurance-box{
+    margin-top: 20px;
+  }
+
+   /* .img {
+    width: 100px;
+    margin-bottom: 30px;
+    align-content: center;
+  } */
+  
