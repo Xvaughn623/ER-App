@@ -7,6 +7,7 @@ import TransmissionConfirmation from './Pages/TransmissionConfirmation';
 import NearbyHospitals from './Pages/NearbyHospitals';
 import Intake from './Pages/Intake';
 import UserProfile from './Pages/UserProfile';
+import ERNavBar from './Components/ERNavBar';
 
 function App() {
   const userProfileProps = {
@@ -31,9 +32,10 @@ function App() {
 
   return (
     <div className="App">
+      <ERNavBar />
       <Routes>
         <Route path="/Home" element={<HomePage />} />
-        <Route path="/" element={<Intake />} />
+        <Route path="/Intake" element={<Intake />} />
         <Route path="/nearbyhospitals" element={<NearbyHospitals />} />
         <Route path="/transmissionconfirmation" element={
           <TransmissionConfirmation
@@ -43,7 +45,6 @@ function App() {
             timeReceived=" 01/24/2023, 18:04:03 EST"
           />
         } />
-        <Route path="/nearbyhospitals" element={<NearbyHospitals />} />
         <Route path="/userprofile" element={<UserProfile {...userProfileProps} />} />
         <Route path="*" element={<Navigate to="/Home" />}/>
       </Routes>

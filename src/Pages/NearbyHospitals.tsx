@@ -1,6 +1,6 @@
 import React from 'react';
 import './NearbyHospitals.css';
-import logo from './logo.png';
+import logo from '../Images/logo.png';
 
 
 interface Hospital {
