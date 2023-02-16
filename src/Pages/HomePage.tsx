@@ -11,7 +11,7 @@ const HomePage = () => {
                         Welcome to The Hospital Triage!
                     </div>
                     <div className='blackButtonContainer'>
-                        <button className='BlackButton'>Personal Information</button>
+                        <button onClick={() => navigate("/userprofile")} className='BlackButton'>Personal Information</button>
                         <button onClick={() => navigate("/nearby-hospitals")} className='BlackButton'>Nearby Hospitals</button>
                     </div>
                     <div>Forms</div>
