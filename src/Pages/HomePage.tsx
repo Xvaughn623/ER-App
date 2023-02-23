@@ -12,7 +12,7 @@ const HomePage = () => {
                     </div>
                     <div className='blackButtonContainer'>
                         <button onClick={() => navigate("/userprofile")} className='BlackButton'>Personal Information</button>
-                        <button onClick={() => navigate("/nearby-hospitals")} className='BlackButton'>Nearby Hospitals</button>
+                        <button onClick={() => navigate("/nearbyhospitals")} className='BlackButton'>Nearby Hospitals</button>
                     </div>
                     <div>Forms</div>
                     <div>
@@ -26,6 +26,5 @@ const HomePage = () => {
             </div>
         )
 }
-
 
 export default HomePage;
