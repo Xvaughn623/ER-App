@@ -1,9 +1,9 @@
 {
-  "first_name": "John",
-  "last_name": "Doe",
+  "Name": "John Doe Jr.",
   "Height": "5'11",
   "Weight": "180",
-  "Sex:": "Male",
+  "Sex": "Male",
+  "Dob": "2001-01-01",
   "Phone_Number": "555-1234",
   "Address": "123 Main St, Washington D.C. USA",
   "Email_Address": "johndoejr@example.com"

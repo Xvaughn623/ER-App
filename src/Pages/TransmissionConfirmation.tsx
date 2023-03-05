@@ -2,14 +2,14 @@ import React from 'react';
 import './TransmissionConfirmation.css';
 import logo from '../Images/logo.png';
 
-interface Props {
+interface TransProps {
   fileName: string;
   transactionId: string;
   timeUploaded: string;
   timeReceived: string;
 }
 
-const TransmissionConfirmation: React.FC<Props> = ({ fileName, transactionId, timeUploaded, timeReceived }) => {
+const TransmissionConfirmation: React.FC<TransProps> = ({ fileName, transactionId, timeUploaded, timeReceived }) => {
   return (
     <div className="transmission-confirmation">
       <img src={logo} alt="Logo" className="logo" />
