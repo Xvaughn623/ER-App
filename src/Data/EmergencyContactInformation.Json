@@ -1,7 +1,7 @@
 {
-  "first_name": "John",
-  "last_name": "Doe Sr",
+  "Name": "John Doe Sr.",
   "Phone_Number": "555-2345",
+  "Dob": "1970-01-01",
   "Address": "123 Main St, Washington D.C. USA",
   "Email_Address": "johndoesr@example.com"
 }

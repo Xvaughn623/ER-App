@@ -3,14 +3,14 @@ import './NearbyHospitals.css';
 import logo from '../Images/logo.png';
 
 
-interface Hospital {
+interface HospitalProps {
   name: string;
   address: string;
   phone: string;
   website: string;
 }
 
-const hospitals: Hospital[] = [
+const hospitals: HospitalProps[] = [
   {
     name: 'Howard University Hospital',
     address: '2041 Georgia Ave NW, Washington, DC 20060',
