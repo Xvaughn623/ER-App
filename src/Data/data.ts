@@ -1,6 +1,6 @@
-import * as emergencyContactInformation from "./EmergencyContactInformation.json";
-import * as insuraceInformation from "./InsuranceInformation.json";
-import * as personalInfo from "./PersonalInfo.json";
+import emergencyContactInformation from "./EmergencyContactInformation.json";
+import insuraceInformation from "./InsuranceInformation.json";
+import personalInfo from "./PersonalInfo.json";
 
 export const userProfileProps = {
     emergencyContactInformation,

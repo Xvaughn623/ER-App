@@ -1,15 +1,15 @@
 import './Intake.css';
 import React from 'react';
 const Intake = () => {
-    // const handleFormSubmit(){
-    //     e.preventDefault();
+    const handleSubmit = (event) =>{
+        event.preventDefault();
 
-    //     const form = e.target;
-    //     const formData = new FormData(form);
-    // }
+        const form = event.target;
+        const formData = new FormData(form);
+    }
     return (
         <div>
-            <form className='IntakeForm'>
+            <form onSubmit={handleSubmit} className='IntakeForm'>
                 <div className="RadioOptions">
                     <div className='IncidentLocation'>Incident Location:</div>
                     <label><input type='radio' name='radio-1' className='radio radio-primary' value='head'/>Head</label>
