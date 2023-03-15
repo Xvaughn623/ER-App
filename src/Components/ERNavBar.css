@@ -1,0 +1,11 @@
+.ERNav{
+    display: block;
+    width: 100%;
+    
+}.NavBackground{
+    background-color: rgba(21, 57, 96, 1);
+}.User-Name{
+
+}.NavLogo:hover{
+cursor:pointer;
+}
