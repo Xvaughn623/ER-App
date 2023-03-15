@@ -16,7 +16,7 @@ import { userProfileProps } from './Data/data';
 function App() {
   return (
     <div className="App">
-      <ERNavBar />
+      <ERNavBar {...userProfileProps} />
       <Routes>
         <Route path="/Home" element={<HomePage />} />
         <Route path="/Intake" element={<Intake />} />
