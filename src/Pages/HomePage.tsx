@@ -14,13 +14,13 @@ const HomePage = () => {
                         <button onClick={() => navigate("/userprofile")} className='BlackButton'>Personal Information</button>
                         <button onClick={() => navigate("/nearbyhospitals")} className='BlackButton'>Nearby Hospitals</button>
                     </div>
-                    <div>Forms</div>
+                    <div><strong>Forms</strong></div>
                     <div>
-                        <button onClick={() => navigate("/Intake")} className='GreyButton'>NEW INTAKE FORM</button>
-                        <button className='GreyButton'>UPDATE MEDICAL HISTORY</button>
-                        <button className='GreyButton'>VIEW PREVIOUS INTAKE FORMS</button>
-                        <button className='GreyButton'>VIEW MEDICAL HISTORY</button>
-                        <button className='GreyButton'>CLICK HERE TO UPLOAD FORMS</button>
+                        <button onClick={() => navigate("/Intake")} className='GreyButton'>New Intake Form</button>
+                        <button className='GreyButton'>View Previous Intake Forms</button>
+                        <button className='GreyButton'>Update Medical History</button>
+                        <button className='GreyButton'>View Medical History</button>
+                        <button onClick={() => navigate("/TransmissionConfirmation")} className='GreyButton'>Upload Forms and Documents</button>
                     </div>
                 </div>
             </div>
