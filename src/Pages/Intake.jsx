@@ -27,9 +27,6 @@ const Intake = () => {
                 </div>
                 <div className='PainSelectors'>
                     <div>Pain Level: </div>
-                
-                
-                    <div>Emergency Level: </div>
                     <label>1<input type='radio' name='radio-2' className='radio radio-secondary' value='pain1'/></label>
                     <label>2<input type='radio' name='radio-2' className='radio radio-secondary' value='pain2'/></label>
                     <label>3<input type='radio' name='radio-2' className='radio radio-secondary' value='pain3'/></label>
