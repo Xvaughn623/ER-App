@@ -15,7 +15,7 @@ const TransmissionConfirmation: React.FC<TransProps> = ({ fileName, transactionI
       <img src={logo} alt="Logo" className="logo" />
       <h2>File Upload Confirmation</h2>
       <div className="file-info">
-        <span className="uploaded-header">Forms Uploaded:</span>
+        <span className="uploaded-header">Files Uploaded:</span>
         <ul className="forms-uploaded">
           <li>Personal Information Form</li>
           <li>Latest Intake Form</li>
