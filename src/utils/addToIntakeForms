@@ -1,0 +1,6 @@
+const addToIntakeForms = () =>{
+    let data = localStorage.getItem('intakeFormData');
+    data = JSON.parse(data);
+    console.log(data.Incident_Loc);
+}
+export default addToIntakeForms;

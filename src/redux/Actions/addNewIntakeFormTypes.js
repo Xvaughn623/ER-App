@@ -1,0 +1,1 @@
+export const ADD_NEW_INTAKE_FORM = 'ADD_NEW_INTAKE_FORM'

@@ -1,9 +1,8 @@
 import React from 'react';
 import './App.css';
 import { Route, Routes, Navigate } from 'react-router-dom';
-//import {createStore} from 'redux';
 import { Provider, connect, useSelector, useDispatch } from 'react-redux';
-
+import store from './redux/reduxStore';
 import HomePage from './Pages/HomePage';
 import TransmissionConfirmation from './Pages/TransmissionConfirmation';
 import NearbyHospitals from './Pages/NearbyHospitals';
