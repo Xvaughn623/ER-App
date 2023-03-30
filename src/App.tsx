@@ -10,8 +10,9 @@ import NearbyHospitals from './Pages/NearbyHospitals';
 import Intake from './Pages/Intake';
 import UserProfile from './Pages/UserProfile';
 import ERNavBar from './Components/ERNavBar';
+import PreviousIntake from './Pages/PreviousIntake';
 
-import { userProfileProps } from './Data/data';
+import { userProfileProps, previousIntakeProps } from './Data/data';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           }
         />
         <Route path="/userprofile" element={<UserProfile {...userProfileProps} />} />
+        <Route path="/previousintake" element={<PreviousIntake {...previousIntakeProps}/>} />
         <Route path="*" element={<Navigate to="/Home" />} />
       </Routes>
     </div>
