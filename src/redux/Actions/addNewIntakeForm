@@ -1,0 +1,8 @@
+import {ADD_NEW_INTAKE_FORM} from './addNewIntakeFormTypes'
+
+const addNewIntakeForm = () => {
+    return{
+        type: ADD_NEW_INTAKE_FORM
+    }
+}
+export default addNewIntakeForm

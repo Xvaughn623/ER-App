@@ -1,0 +1,24 @@
+import {ADD_NEW_INTAKE_FORM} from '../Actions/addNewIntakeFormTypes'
+
+const initialIntakeArrayState = {IntakeArray:[{
+    Incident_Loc: "",
+    Pain_Level: "",
+    Emergency_Level: "",
+    Symptoms: "",
+    Rel_Information: ""
+  }]};
+
+let data = localStorage.getItem('intakeFormData');
+data = JSON.parse(data);
+
+const addNewIntakeFormReducer = (state = initialIntakeArrayState, action) =>{
+    switch(action.type){
+        case ADD_NEW_INTAKE_FORM: return {
+            ...state,
+            IntakeArray: state.IntakeArray.push(data)
+        }
+        default: return state;
+    }
+}
+
+export default addNewIntakeFormReducer;

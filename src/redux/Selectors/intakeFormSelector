@@ -1,0 +1,17 @@
+import {addNewIntakeForm} from '../redux'
+import {connect} from 'react-redux'
+
+
+const mapStateToProps = state =>{
+    return {
+        IntakeArray: state.IntakeArray
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return{
+        addNewIntakeForm:() => dispatch(addNewIntakeForm())
+    }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)
