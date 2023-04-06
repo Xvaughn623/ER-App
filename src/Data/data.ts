@@ -16,5 +16,4 @@ export const userProfileProps = {
     relevantInfo: "was playing basketball at the park, went up for a rebound and collided with someone, I fell and hit my head on the ground",
   };
 
-
 export type UserProfileProps = typeof userProfileProps;

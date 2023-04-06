@@ -18,7 +18,7 @@ const HomePage = () => {
                     <div>
                         <button onClick={() => navigate("/Intake")} className='GreyButton'>New Intake Form</button>
                         <button onClick={() => navigate("/previousintake")} className='GreyButton'>View Previous Intake Forms</button>
-                        <button className='GreyButton'>Update Medical History</button>
+                        <button onClick={() => navigate("/medicalhistory")} className='GreyButton'>Update Medical History</button>
                         <button className='GreyButton'>View Medical History</button>
                         <button onClick={() => navigate("/TransmissionConfirmation")} className='GreyButton'>Upload Forms and Documents</button>
                     </div>
