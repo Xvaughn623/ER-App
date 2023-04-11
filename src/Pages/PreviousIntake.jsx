@@ -1,26 +1,29 @@
 import React from 'react';
 import './PreviousIntake.css';
 
-type PreviousIntakeProps = {
-  incidentLocation: string;
-  painLevel: number;
-  emergencyLevel: number;
-  symptoms: string;
-  relevantInfo: string;
-};
+// type PreviousIntakeProps = {
+//   incidentLocation: string;
+//   painLevel: number;
+//   emergencyLevel: number;
+//   symptoms: string;
+//   relevantInfo: string;
+// };
 
-const PreviousIntake: React.FC<PreviousIntakeProps> = (props) => {
+// let testData = localStorage.getItem('intakeFormDataArray');
+// let testDataObject = testData[test];
+
+const PreviousIntake = (props) => {
   return (
     <div>
-      <form className='PreviousIntakeForm'>
+      <form className="PreviousIntakeForm">
         <div className="RadioOptions">
-          <div className='IncidentLocation'>Incident Location: {props.incidentLocation}</div>
+          <div className="IncidentLocation">Incident Location: {props.incidentLocation}</div>
         </div>
-        <div className='PainSelectors'>
+        <div className="PainSelectors">
           <div>Pain Level: {props.painLevel}</div>
         </div>
 
-        <div className='EmergencySelectors'>
+        <div className="EmergencySelectors">
           <div>Emergency Level: {props.emergencyLevel}</div>
         </div>
         <div>
@@ -28,7 +31,7 @@ const PreviousIntake: React.FC<PreviousIntakeProps> = (props) => {
           <label>
             <textarea value={props.symptoms} readOnly></textarea>
           </label>
-        </div> 
+        </div>
         <div>
           <div>Provide All Relevant Information:</div>
           <label>
@@ -41,6 +44,6 @@ const PreviousIntake: React.FC<PreviousIntakeProps> = (props) => {
       </footer>
     </div>
   );
-}
+};
 
 export default PreviousIntake;

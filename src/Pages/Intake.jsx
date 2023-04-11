@@ -12,47 +12,48 @@ const Intake = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    let temp = formDataJSON();
+    temp.Incident_Loc = event.target.IncidentLocation.value;
+    temp.Symptoms = event.target.Symptoms.value;
+    temp.Rel_Information = event.target.Rel_Information.value;
+    temp.Pain_Level = event.target.Pain_Level.value;
+    temp.Emergency_Level = event.target.Emergency_Level.value;
 
-    formDataJSON.Incident_Loc = event.target.IncidentLocation.value;
-    formDataJSON.Symptoms = event.target.Symptoms.value;
-    formDataJSON.Rel_Information = event.target.Rel_Information.value;
-    formDataJSON.Pain_Level = event.target.Pain_Level.value;
-    formDataJSON.Emergency_Level = event.target.Emergency_Level.value;
-
-    setIntakeFormData(formDataJSON);
+    setIntakeFormDataArray(temp);
     //setIntakeFormDataArray(formDataJSON);
     //const tempIntakeArray = useSelector(state => state.IntakeArray)
     //const unsubscribe = props.store.subscribe(()=> console.log('updated state', store.getState()))
     //props.store.dispatch(addNewIntakeForm());
     //unsubscribe();
-    getIntakeFormData();
+    //getIntakeFormData();
     //dispatch(addNewIntakeForm());
     // const form = event.target;
     // const formData = new FormData(form);
   };
 
   const setIntakeFormData = (obj) => {
-    localStorage.setItem('intakeFormData', JSON.stringify(obj));
+    console.log("passed through JSON object",obj);
+    //localStorage.setItem('intakeFormData', obj);
     let intakeObject = obj;
     //getIntakeFormData();
     //intakeObject =JSON.parse(intakeObject);
     setIntakeFormDataArray(intakeObject);
   };
   const setIntakeFormDataArray = (intakeObject) => {
-    console.log(intakeObject.Emergency_Level);
+    console.log("passed through JSON object to the array func",intakeObject);
+    //console.log("testing object emergency level");
+    console.log("testing object emergency level: ",intakeObject.Emergency_Level);
+    console.log("array before push",intakeFormDataArray);
     intakeFormDataArray.push(intakeObject);
-    localStorage.setItem('intakeFormDataArray',intakeFormDataArray);
+    localStorage.setItem('intakeFormDataArray',JSON.stringify(intakeFormDataArray));
+    let testArray = JSON.parse(localStorage.getItem('intakeFormDataArray'));
+    console.log("Getting first object in local storage",testArray);
     const test = intakeFormDataArray.length-1;
 
     let testData = localStorage.getItem('intakeFormDataArray');
+    console.log("testing getting data Array:", testData);
     let testDataObject = testData[test];
     testDataObject = JSON.stringify(testDataObject);
-    console.log(testDataObject);
-    console.log(testDataObject.Incident_Loc);
-    console.log(testDataObject.Symptoms);
-    console.log(testDataObject.Rel_Information);
-    console.log(testDataObject.Pain_Level);
-    console.log(testDataObject.Emergency_Level);
   };
 
   const getIntakeFormData = () => {
@@ -74,12 +75,14 @@ const Intake = () => {
   //   console.log(data.Pain_Level);
   //   console.log(data.Emergency_Level);
   // };
-  const formDataJSON = {
-    Incident_Loc: '',
-    Pain_Level: '',
-    Emergency_Level: '',
-    Symptoms: '',
-    Rel_Information: '',
+  function formDataJSON () {
+    return{
+      'Incident_Loc': '',
+      'Pain_Level': '',
+      'Emergency_Level': '',
+      'Symptoms': '',
+      'Rel_Information': '',
+    }
   };
   return (
     <div>
@@ -180,10 +183,6 @@ const Intake = () => {
           <label>
             1
             <input type="radio" name="Emergency_Level" className="radio radio-tertiary" value="1" />
-          </label>
-          <label>
-            2
-            <input type="radio" name="Emergency_Level" className="radio radio-tertiary" value="2" />
           </label>
           <label>
             2
