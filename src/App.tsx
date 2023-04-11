@@ -10,6 +10,7 @@ import Intake from './Pages/Intake';
 import UserProfile from './Pages/UserProfile';
 import ERNavBar from './Components/ERNavBar';
 import PreviousIntake from './Pages/PreviousIntake';
+import ViewPreviousIntakeFormsPage from './Pages/ViewPreviousIntakeFormsPage';
 
 import { userProfileProps, previousIntakeProps } from './Data/data';
 
@@ -33,7 +34,8 @@ function App() {
           }
         />
         <Route path="/userprofile" element={<UserProfile {...userProfileProps} />} />
-        <Route path="/previousintake" element={<PreviousIntake {...previousIntakeProps}/>} />
+        <Route path="/previousintake" element={<PreviousIntake {...previousIntakeProps} />} />
+        <Route path="/previousintakeforms" element={<ViewPreviousIntakeFormsPage />} />
         <Route path="*" element={<Navigate to="/Home" />} />
       </Routes>
     </div>
