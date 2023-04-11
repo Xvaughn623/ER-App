@@ -26,7 +26,7 @@ const HomePage = () => {
           <button onClick={() => navigate('/previousintakeforms')} className="GreyButton">
             View Previous Intake Forms
           </button>
-          <button className="GreyButton">Update Medical History</button>
+          <button onClick={() => navigate("/medicalhistory")} className='GreyButton'>Update Medical History</button>
           <button className="GreyButton">View Medical History</button>
           <button onClick={() => navigate('/TransmissionConfirmation')} className="GreyButton">
             Upload Forms and Documents
