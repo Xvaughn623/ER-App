@@ -61,7 +61,7 @@ const ViewMedicalHistory = () => {
           </div>
         </form>
         <footer className="Date">
-          <p>Submitted: 03/24/2023, 12:04:03 EST </p>
+          <p>Date Uploaded: {medicalHistory.dateUploaded} {medicalHistory.timeUploaded}</p>
         </footer>
       </div>
       ))}

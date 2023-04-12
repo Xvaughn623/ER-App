@@ -29,7 +29,7 @@ const ViewPreviousIntakeFormsPage = () => {
             </div>
           </form>
         <footer className="Date">
-          <p>Submitted: 03/24/2023, 12:04:03 EST </p>
+          <p>Date Uploaded {intake.dateUploaded} {intake.timeUploaded} </p>
         </footer>
       </div>
       ))}

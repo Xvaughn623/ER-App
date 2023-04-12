@@ -10,11 +10,14 @@ const Intake = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     let temp = formDataJSON();
+    let currentTime = new Date();
     temp.Incident_Loc = event.target.IncidentLocation.value;
     temp.Symptoms = event.target.Symptoms.value;
     temp.Rel_Information = event.target.Rel_Information.value;
     temp.Pain_Level = event.target.Pain_Level.value;
     temp.Emergency_Level = event.target.Emergency_Level.value;
+    temp.dateUploaded = currentTime.toLocaleDateString();
+    temp.timeUploaded = currentTime.toLocaleTimeString();
     setIntakeFormDataArray(temp);
   };
 
@@ -31,6 +34,8 @@ const Intake = () => {
       'Emergency_Level': '',
       'Symptoms': '',
       'Rel_Information': '',
+      'dateUploaded': '',
+      'timeUploaded': '',
     }
   };
   return (
