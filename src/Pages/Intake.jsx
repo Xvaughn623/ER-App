@@ -6,10 +6,7 @@ import addNewIntakeForm from '../redux';
 const intakeFormDataArray = [];
 
 const Intake = () => {
-  //const select = useSelector();
-
   const dispatch = useDispatch();
-
   const handleSubmit = (event) => {
     event.preventDefault();
     let temp = formDataJSON();
@@ -18,63 +15,15 @@ const Intake = () => {
     temp.Rel_Information = event.target.Rel_Information.value;
     temp.Pain_Level = event.target.Pain_Level.value;
     temp.Emergency_Level = event.target.Emergency_Level.value;
-
     setIntakeFormDataArray(temp);
-    //setIntakeFormDataArray(formDataJSON);
-    //const tempIntakeArray = useSelector(state => state.IntakeArray)
-    //const unsubscribe = props.store.subscribe(()=> console.log('updated state', store.getState()))
-    //props.store.dispatch(addNewIntakeForm());
-    //unsubscribe();
-    //getIntakeFormData();
-    //dispatch(addNewIntakeForm());
-    // const form = event.target;
-    // const formData = new FormData(form);
   };
 
-  const setIntakeFormData = (obj) => {
-    console.log("passed through JSON object",obj);
-    //localStorage.setItem('intakeFormData', obj);
-    let intakeObject = obj;
-    //getIntakeFormData();
-    //intakeObject =JSON.parse(intakeObject);
-    setIntakeFormDataArray(intakeObject);
-  };
   const setIntakeFormDataArray = (intakeObject) => {
-    console.log("passed through JSON object to the array func",intakeObject);
-    //console.log("testing object emergency level");
-    console.log("testing object emergency level: ",intakeObject.Emergency_Level);
-    console.log("array before push",intakeFormDataArray);
     intakeFormDataArray.push(intakeObject);
     localStorage.setItem('intakeFormDataArray',JSON.stringify(intakeFormDataArray));
-    let testArray = JSON.parse(localStorage.getItem('intakeFormDataArray'));
-    console.log("Getting first object in local storage",testArray);
-    const test = intakeFormDataArray.length-1;
-
     let testData = localStorage.getItem('intakeFormDataArray');
     console.log("testing getting data Array:", testData);
-    let testDataObject = testData[test];
-    testDataObject = JSON.stringify(testDataObject);
   };
-
-  const getIntakeFormData = () => {
-    let data = localStorage.getItem('intakeFormData');
-    data = JSON.parse(data);
-    console.log(data);
-    console.log(data.Incident_Loc);
-    console.log(data.Symptoms);
-    console.log(data.Rel_Information);
-    console.log(data.Pain_Level);
-    console.log(data.Emergency_Level);
-  };
-  // const getIntakeFormDataArray = () => {
-  //   let data = localStorage.getItem('intakeFormData');
-  //   data = JSON.parse(data);
-  //   console.log(data.Incident_Loc);
-  //   console.log(data.Symptoms);
-  //   console.log(data.Rel_Information);
-  //   console.log(data.Pain_Level);
-  //   console.log(data.Emergency_Level);
-  // };
   function formDataJSON () {
     return{
       'Incident_Loc': '',
