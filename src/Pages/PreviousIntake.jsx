@@ -1,17 +1,6 @@
 import React from 'react';
 import './PreviousIntake.css';
 
-// type PreviousIntakeProps = {
-//   incidentLocation: string;
-//   painLevel: number;
-//   emergencyLevel: number;
-//   symptoms: string;
-//   relevantInfo: string;
-// };
-
-// let testData = localStorage.getItem('intakeFormDataArray');
-// let testDataObject = testData[test];
-
 const PreviousIntake = (props) => {
   return (
     <div>
