@@ -6,6 +6,7 @@ const MedicalHistory = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     let temp = medicalHistoryJson();
+    let currentTime = new Date();
     console.log(event.target.firstName.value);
     temp.firstName = event.target.firstName.value;
     temp.lastName = event.target.lastName.value;
@@ -20,6 +21,10 @@ const MedicalHistory = () => {
     temp.travelMilitaryHistory = event.target.travelMilitaryHistory.value;
     temp.familyHistory = event.target.familyHistory.value;
     temp.womensHistory = event.target.womensHistory.value;
+    temp.dateUploaded = currentTime.toLocaleDateString();
+    temp.timeUploaded = currentTime.toLocaleTimeString();
+
+    console.log(temp.currentTime);
     setMedicalFormDataArray(temp);
   };
   const setMedicalFormDataArray = (intakeObject) =>{
@@ -44,6 +49,8 @@ const MedicalHistory = () => {
     'travelMilitaryHistory': '',
     'familyHistory': '',
     'womensHistory': '',
+    'dateUploaded': '',
+    'timeUploaded': '',
     }
   };
   

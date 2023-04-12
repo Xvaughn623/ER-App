@@ -14,7 +14,7 @@ const ERNavBar = (props: UserProfileProps) => {
         <Navbar.Brand>
           <img src={logo} className="NavLogo" alt="our-logo" onClick={() => navigate('/Home')} />{' '}
         </Navbar.Brand>
-        <Navbar.Text onClick={() => navigate('/userprofile')} className="User-Name">
+        <Navbar.Text className="User-Name" onClick={() => navigate('/userprofile')}>
           {props.Name}
         </Navbar.Text>
       </Navbar>
