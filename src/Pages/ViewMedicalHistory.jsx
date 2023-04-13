@@ -2,9 +2,10 @@ import './MedicalHistory.css';
 const ViewMedicalHistory = () => {
     let testData = localStorage.getItem('medicalFormDataArray');
     testData = JSON.parse(testData);
+    let rTestData = testData.toReversed();
   return(
     <div>
-      {testData?.map((medicalHistory) => (
+      {rTestData?.map((medicalHistory) => (
         <div>
         <form className="MedicalHistory">
           <div className="">

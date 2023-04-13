@@ -1,9 +1,10 @@
 const ViewPreviousIntakeFormsPage = () => {
     let testData = localStorage.getItem('intakeFormDataArray');
     testData = JSON.parse(testData);
+    let rTestData = testData.toReversed();
   return(
     <div>
-      {testData?.map((intake) => (
+      {rTestData?.map((intake) => (
         <div>
           <form className="PreviousIntakeForm">
             <div className="RadioOptions">
