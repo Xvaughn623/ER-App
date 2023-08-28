@@ -23,12 +23,12 @@ const Intake = () => {
 
   const setIntakeFormDataArray = (intakeObject) => {
     intakeFormDataArray.push(intakeObject);
-    localStorage.setItem('intakeFormDataArray',JSON.stringify(intakeFormDataArray));
+    localStorage.setItem('intakeFormDataArray', JSON.stringify(intakeFormDataArray));
     let testData = localStorage.getItem('intakeFormDataArray');
     console.log("testing getting data Array:", testData);
   };
-  function formDataJSON () {
-    return{
+  function formDataJSON() {
+    return {
       'Incident_Loc': '',
       'Pain_Level': '',
       'Emergency_Level': '',
